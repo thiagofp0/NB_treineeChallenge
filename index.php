@@ -16,6 +16,9 @@
 	<section id="main">
 			<div class="inner">
 					<div class="content">
+                    <div align="center">
+							<img src="images/logo1.png" width="700" ><br><br>
+					</div>
 						<table>
 							<tr>
 								<td>Colocação</td>

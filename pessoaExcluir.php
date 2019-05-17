@@ -4,14 +4,13 @@
       echo "<script>alert('O usuário não foi autenticado!!!'); location.href='login.php';</script>"; 
     }
 
-    $idPessoa = $_POST['idPessoa'];
+    $idPessoa = $_GET['idPessoa'];
 
     include("conexao.php");
 
     if($conexao){
-
         $sql = "DELETE FROM tbPessoa WHERE idPessoa = '$idPessoa';";
-        $result = mysqli_query($conexao, $sql);
+        $resultado = mysqli_query($conexao, $sql);
         mysqli_close($conexao);
         if($resultado == 1){
 			echo "<script>alert('Usuário excluído com sucesso!'); location.href='pessoaTabela.php';</script>"; 

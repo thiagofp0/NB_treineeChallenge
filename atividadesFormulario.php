@@ -4,8 +4,32 @@
   session_start();
   if (!isset($_SESSION['usuario'])){
 	echo "<script>alert('O usuário não foi autenticado!!!'); location.href='login.php';</script>"; 
-  }
-  ?>
+	}
+	$idAtividade = 0;
+	$desAtividade ="";
+	$pontos = "";
+
+if(isset($_GET["idAtividade"])){
+		
+    $idAtividade = $_GET["idAtividade"];;
+    include("conexao.php");
+    if($conexao) { 
+        $sql = "SELECT * FROM tbAtividade WHERE idAtividade = '$idAtividade';";		
+        
+        $resultado = mysqli_query($conexao, $sql);
+        mysqli_close($conexao);
+        
+        foreach($resultado as $linha) {
+					$idAtividade = $linha['idAtividade'];
+					$desAtividade = $linha['desAtividade'];
+					$pontos = $linha['pontos'];
+        } 
+    }else{
+        echo 'Falha ao conectar: '.mysqli_error();
+    }
+}
+?>
+	
 <!DOCTYPE HTML>
 
 <html>
@@ -47,8 +71,9 @@
 
 					<div class="content">
 						<form action="atividadeSalvar.php" method="post">
-							<p>Nome da atividade:</p><input type="text" name="desAtividade"><br>
-							<p>Pontos da atividade:</p><input type="text" name="pontos"><br>
+							<input type="hidden" name="idAtividade" id="idAtividade" value="<?php echo $idAtividade ?>">
+							<p>Nome da atividade:</p><input type="text" name="desAtividade" value="<?php echo $desAtividade?>" required ><br>
+							<p>Pontos da atividade:</p><input type="text" name="pontos" value="<?php echo $pontos?>" required><br>
 							<input type="submit" name="adicionarAtividade" value="Adicionar">
 						</form>
 					</div>

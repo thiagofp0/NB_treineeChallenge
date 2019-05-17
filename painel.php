@@ -1,5 +1,7 @@
 <?php
 //Funcionando parcialmente. Falta acertar os links
+
+// Falta colocar o cabeçalho dessa página em todas as outras páginas do sistema.
     session_start();
     if (!isset($_SESSION['usuario'])){
     echo "<script>alert('O usuário não foi autenticado!!!'); location.href='login.php';</script>"; 
@@ -20,20 +22,20 @@
 	<body>
 		<section id="main">
 			<div class="inner">
-				<section id="one" class="wrapper style1" align="cente">
+				<section id="one" class="wrapper style1" alignment="center">
 					<header id="cabecalho">
 						<nav class="menu">
 							<ul>
-    							<li><a href="#"><strong>Tabelas</stron></a>
+    							<li><a href="#"><strong>Tabelas</strong></a>
         							<ul class="submenu">
                                         <!-- <li><a href="lancarPontos.php"><strong>Lançar</strong></a> -->
-                                        <li><a href="cadastrarPontuacao.php"><strong>Tabela Pessoas</strong></a>
-										<li><a href="cadastrarPontuacao.php"><strong>Tabela Atividades</strong></a>
+                                        <li><a href="pessoaTabela.php">Tabela Pessoas</a>
+										<li><a href="atividadesTabela.php">Tabela Atividades</a>
             						</ul>
-        						<li><a href="">Cadastrar</a>
+        						<li><a href=""><strong>Cadastrar</strong></a>
         							<ul class="submenu">
 									<li><a href="cadastrarPontuacao.php">Lancar Pontos</a></li>
-        								<li><a href="cadastrar.php">Cadastrar Pessoa</a></li>
+        								<li><a href="pessoaFormulario.php">Cadastrar Pessoa</a></li>
         								<li><a href="atividadesFormulario.php">Cadastrar Atividade</a></li>
         							</ul>
         						</li>
@@ -54,9 +56,9 @@
 					<div class="content">
 						<table>
 							<tr>
-								<td>Colocação</td>
-								<td>Nome</td>
-								<td>Pontos</td>
+								<td><strong>Colocação</strong></td>
+								<td><strong>Nome</strong></td>
+								<td><strong>Pontos</strong></td>
                             </tr>
                             <tbody>
                         <?php
