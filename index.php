@@ -29,7 +29,7 @@
                         <?php
                             include ("conexao.php");
                             if($conexao) {
-                                $sql = "SELECT nmpessoa as Nome, sum(pontos) as Pontos FROM tbPessoa p INNER JOIN tbPessoaAtividade pa inner join tbatividade a on p.idPessoa = pa.idPessoa and pa.idatividade = a.idatividade group by nmpessoa;";		
+                                $sql = "SELECT nmpessoa as Nome, sum(pontos) as Pontos FROM tbPessoa p INNER JOIN tbPessoaAtividade pa inner join tbatividade a on p.idPessoa = pa.idPessoa and pa.idatividade = a.idatividade group by nmpessoa DESC;";		
                                 $resultado = mysqli_query($conexao, $sql);
                                 $row = mysqli_num_rows($resultado);
 

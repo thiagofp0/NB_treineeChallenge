@@ -4,7 +4,7 @@
       echo "<script>alert('O usuário não foi autenticado!!!'); location.href='login.php';</script>"; 
     }
 
-    $idPessoaAtividade = $_POST['idPessoaAtividade'];
+    $idPessoaAtividade = $_GET['idPessoaAtividade'];
 
     include("conexao.php");
 

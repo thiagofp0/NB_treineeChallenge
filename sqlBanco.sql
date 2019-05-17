@@ -50,7 +50,10 @@ insert into tbpessoa (nmpessoa, cargo, email, idgrupoacesso) values('Sávio', 'D
 insert into tbatividade (desAtividade, dataAtividade, pontos) values ('aplicativo', '21/02/18', 500);
 insert into tbpessoaatividade (idpessoa, idAtividade) values (2,2);
 
-SELECT nmpessoa, sum(select pontos from tbatividade a inner join tbpessoaatividade pa inner join tbpessoa p on a.idAtividade=pa.idAtividade and pa.idpessoa = p.idpessoa) as Pontos FROM tbPessoa p INNER JOIN tbPessoaAtividade pa inner join tbatividade a on p.idPessoa = pa.idPessoa and pa.idatividade = a.idatividade;
+SELECT idpessoa from tbpessoa;
 
+SELECT nmpessoa, email, sum(pontos) as Pontos FROM tbPessoa p INNER JOIN tbPessoaAtividade pa inner join tbatividade a on p.idPessoa = pa.idPessoa and pa.idatividade = a.idatividade where p.idPessoa = 1;
 
-SELECT nmpessoa, sum(pontos) as Pontos FROM tbPessoa p INNER JOIN tbPessoaAtividade pa on p.idpessoa = pa.idpessoa inner join tbatividade a on pa.idatividade = a.idatividade;
+/*Select (desAtividade, pontos, idPessoaAtividade) from tbAtividade a inner join tbPessoaAtividade pa on a.idAtividade = pa.idAtividade inner join tbpessoa on pa.idPessoa = p.idPessoa where pa.idPessoa = 1;*/
+
+select (desAtividade, pontos, idPessoaAtividade) from tbatividade a inner join tbpessoaatividade pa on a.idatividade = pa.idatividade where pa.idPessoa = 1;

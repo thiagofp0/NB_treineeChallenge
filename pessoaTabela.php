@@ -44,6 +44,7 @@
                 <td><strong>Email</strong></td>
                 <td></td>
                 <td></td>
+                <td></td>
             </tr>
             <tbody>
                 <?php
@@ -56,11 +57,12 @@
                         if($row > 0){
                             foreach($resultado as $linha){		
                                 echo"<tr>";			
-                                echo"<td>".$linha['nmPessoa']."</td>";
-                                echo"<td>".$linha['cargo']."</td>";
-                                echo"<td>".$linha['email']."</td>";
-                                echo"<td> <a class='btn btn-success' href='pessoaFormulario.php?idPessoa=".$linha['idPessoa']."'> Editar </a> </td>";
-								echo"<td> <a class='btn btn-danger'  href='pessoaExcluir.php?idPessoa=".$linha['idPessoa']."'> Excluir </a> </td>";							
+                                    echo"<td>".$linha['nmPessoa']."</td>";
+                                    echo"<td>".$linha['cargo']."</td>";
+                                    echo"<td>".$linha['email']."</td>";
+                                    echo"<td> <a class='btn btn-success' href='pessoaFormulario.php?idPessoa=".$linha['idPessoa']."'> Editar </a> </td>";
+                                    echo"<td> <a class='btn btn-danger'  href='pessoaDetalhes.php?idPessoa=".$linha['idPessoa']."'> Detalhes </a> </td>";
+                                    echo"<td> <a class='btn btn-danger'  href='pessoaExcluir.php?idPessoa=".$linha['idPessoa']."'> Excluir </a> </td>";													
                                 echo"</tr>";					
                             }
                         }
