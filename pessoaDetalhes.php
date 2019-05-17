@@ -8,6 +8,8 @@ mysqli_close($conexao);
 foreach ($resultado as $linha) {
     $idPessoa = $linha['idPessoa'];
     $nmPessoa = $linha['nmPessoa'];
+    $totalPontos = 0;
+    $TotalAtividades = 0;
 }
 ?>
 
@@ -75,6 +77,8 @@ foreach ($resultado as $linha) {
                                                     echo "<tr>";
                                                         echo"<td align='center'>".$linha['desAtividade']."</td>";
                                                         echo"<td align='center'>".$linha['pontos']."</td>";
+                                                        $totalPontos = $totalPontos + $linha['pontos'];
+                                                        $TotalAtividades++;
                                                         echo"<td> <a class='btn btn-danger'  href='pessoaDetalhes.php?idPessoa=".$linha['idPessoa']."'> Excluir </a> </td>";
                                                     echo"</tr>";
                                                 }
@@ -83,10 +87,14 @@ foreach ($resultado as $linha) {
                                     ?>
                                 </tbody>
                                 <br>
-                                <td color="blue">
-                                    Total de Atividades
+                                <td color="blue" align="center">
+                                    Total de Atividades:
+                                    <?php echo $TotalAtividades;?>
                                 </td>
-                                <td>Total de pontos</td>
+                                <td align="center">Total de pontos
+                                <?php echo $totalPontos;?>
+                                </td>
+                                <td></td>
                                 </tr>
                         </table>
                     </font>
