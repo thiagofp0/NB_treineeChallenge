@@ -1567,7 +1567,7 @@
 	}
 
 	body {
-		background: #fff;
+		background-image: url(/images/bg.jpg);
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1628,8 +1628,9 @@
 		}
 
 	body {
-		background-color: #fff;
-		color: rgba(0, 0, 0, 0.5);
+		background-image: url(/images/bg.jpg);
+		
+
 	}
 
 	body, input, select, textarea {
@@ -2902,7 +2903,7 @@
 /* Header */
 
 	body {
-		background-color: #1e1f23;
+		background-image: url(images/bg.jpg);
 		padding-top: 8rem;
 	}
 
@@ -2921,7 +2922,7 @@
 			-ms-transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			transition: opacity 1.5s ease-in-out, visibility 1.5s;
 			content: '';
-			background-image: url(../../images/bg.jpg);
+			background-image: url(/images/bg.jpg);
 			background-attachment: fixed;
 			background-position: center;
 			background-repeat: no-repeat;

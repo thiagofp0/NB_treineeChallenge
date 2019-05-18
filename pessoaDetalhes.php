@@ -63,7 +63,6 @@ foreach ($resultado as $linha) {
                                     <td>Atividade</td>
                                     <td>Pontos</td>
                                     <td></td>
-                                    <td></td>
                                 </tr>
                                 <tbody>
                                     <?php
@@ -76,13 +75,11 @@ foreach ($resultado as $linha) {
                                             if ($row > 0) {
                                                 foreach ($resultado as $linha) {
                                                     echo "<tr>";
-                                                        echo"<td align='center' type='hidden'>".$linha['idAtividade']."</td>";
-                                                        $idAtividade = $linha['idAtividade'];
                                                         echo"<td align='center'>".$linha['desAtividade']."</td>";
                                                         echo"<td align='center'>".$linha['pontos']."</td>";
                                                         $totalPontos = $totalPontos + $linha['pontos'];
                                                         $TotalAtividades++;
-                                                        echo"<td> <a class='btn btn-danger'  href='removerPessoaAtividade.php?idPessoa=".$idPessoa."&idAtividade=".$idAtividade."'> Excluir </a> </td>";
+                                                        echo"<td> <a class='btn btn-danger'  href='pessoaDetalhes.php?idPessoa=".$linha['idPessoa']."'> Excluir </a> </td>";
                                                     echo"</tr>";
                                                 }
                                             }
@@ -97,7 +94,6 @@ foreach ($resultado as $linha) {
                                 <td align="center">Total de pontos
                                 <?php echo $totalPontos;?>
                                 </td>
-                                <td></td>
                                 <td></td>
                                 </tr>
                         </table>

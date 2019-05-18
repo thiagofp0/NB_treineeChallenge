@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/painel.css" />
 	</head>
 
+<body>
 	<section id="main">
 			<div class="inner">
 					<div class="content">
