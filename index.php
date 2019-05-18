@@ -13,6 +13,13 @@
         <link rel="stylesheet" href="css/painel.css" />
 	</head>
 
+    <style>
+        img{
+            max-width:100%;
+            height:auto;
+    }
+    </style>
+
 <body>
 	<section id="main">
 			<div class="inner">
