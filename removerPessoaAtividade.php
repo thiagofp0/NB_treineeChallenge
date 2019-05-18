@@ -17,11 +17,11 @@
 
     if($conexao){
 
-        $sql = "DELETE FROM tbPessoaAtividade WHERE idPessoaAtividade = '$idPessoaAtividade';";
-        $result = mysqli_query($conexao, $sql);
+        $sql = "DELETE FROM tbPessoaAtividade WHERE idPessoa = '$idPessoa' and idAtividade='$idAtividade';";
+        $resultado = mysqli_query($conexao, $sql);
         mysqli_close($conexao);
         if($resultado == 1){
-			echo "<script>alert('Registro excluído com sucesso!'); location.href='atividadesPessoaTabela.php';</script>"; 
+			echo "<script>alert('Registro excluído com sucesso!'); location.href='pessoaDetalhes.php';</script>"; 
 		}else{
       echo "<script>negado();</script>";
 			//echo "<script>alert('Erro ao excluir o registro'); location.href='atividadesPessoaTabela.php';</script>"; 			
