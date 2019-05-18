@@ -15,9 +15,9 @@
     $resultado = mysqli_query($conexao, $sql);
     mysqli_close($conexao);
     if($resultado == 1){
-        echo "<script>alert('Registro salvo com sucesso!'); location.href='atividadesPessoaTabela.php';</script>"; 
+        echo "<script>alert('Registro salvo com sucesso!'); location.href='pessoaDetalhes.php?idPessoa=".$idPessoa."';</script>"; 
     }else{
-        echo "<script>alert('Erro ao salvar o registro'); location.href='atividadesPessoaTabela.php';</script>"; 			
+        echo "<script>alert('Erro ao salvar o registro'); location.href='cadastrarPontuacao.php';</script>"; 			
     }
   }else{
     echo 'Falha ao conectar: '.mysqli_error();

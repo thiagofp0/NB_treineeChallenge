@@ -25,16 +25,24 @@
 		<section id="one" class="wrapper style1" alignment="cente">
 	        <header id="cabecalho">
             <nav class="menu">
-                <ul>
-                    <li><a href="#" alignment="center"><strong>RANKING</strong></a>
-                    <!-- <ul class="submenu">
-                    <li><a href="geral.php"><strong>GERAL</strong></a>
-                    <li><a href="mensal.php"><strong>MENSAL</strong></a>
-                    <li><a href="semanal.php"><strong>SEMANAL</strong></a>
-                    </ul> -->
-                    <li><a href="login-php/index.php"><strong>LOGIN</strong></a></li>
-                </ul>
-            </nav>
+							<ul>
+    							<li><a href="#"><strong>Tabelas</strong></a>
+        							<ul class="submenu">
+                                        <!-- <li><a href="lancarPontos.php"><strong>Lançar</strong></a> -->
+                                        <li><a href="pessoaTabela.php">Tabela Pessoas</a>
+										<li><a href="atividadesTabela.php">Tabela Atividades</a>
+            						</ul>
+        						<li><a href=""><strong>Cadastrar</strong></a>
+        							<ul class="submenu">
+									<li><a href="cadastrarPontuacao.php">Lancar Pontos</a></li>
+        								<li><a href="pessoaFormulario.php">Cadastrar Pessoa</a></li>
+        								<li><a href="atividadesFormulario.php">Cadastrar Atividade</a></li>
+        							</ul>
+        						</li>
+                                <li><a href="painel.php"><strong>Painel Adm</strong></a></li>
+								<li><a href="logout.php"><strong>Logout</strong></a></li>
+    						</ul>
+						</nav>
         </section>
 
         <table>

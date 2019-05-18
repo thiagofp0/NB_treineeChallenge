@@ -50,19 +50,22 @@ if(isset($_GET["idPessoa"])){
 			<div class="inner">
 				<section id="one" class="wrapper style1" alignment="cente">
 					<header id="cabecalho">
-						<nav class="menu">
+					<nav class="menu">
 							<ul>
-    							<li><a href="#"><strong>Pontos</strong></a>
+    							<li><a href="#"><strong>Tabelas</strong></a>
         							<ul class="submenu">
-            							<li><a href="lancarPontos.php"><strong>LanĂ§ar</strong></a>
-                						<li><a href="atualizar.php"><strong>Atualizar</strong></a>
+                                        <!-- <li><a href="lancarPontos.php"><strong>Lançar</strong></a> -->
+                                        <li><a href="pessoaTabela.php">Tabela Pessoas</a>
+										<li><a href="atividadesTabela.php">Tabela Atividades</a>
             						</ul>
-        						<li><a href="">Cadastrar</a>
+        						<li><a href=""><strong>Cadastrar</strong></a>
         							<ul class="submenu">
-        								<li><a href="#">Usuario</a></li>
-        								<li><a href="atividades.php">Atividade</a></li>
+									<li><a href="cadastrarPontuacao.php">Lancar Pontos</a></li>
+        								<li><a href="pessoaFormulario.php">Cadastrar Pessoa</a></li>
+        								<li><a href="atividadesFormulario.php">Cadastrar Atividade</a></li>
         							</ul>
         						</li>
+								<li><a href="painel.php"><strong>Painel Adm</strong></a></li>
 								<li><a href="logout.php"><strong>Logout</strong></a></li>
     						</ul>
 						</nav>
