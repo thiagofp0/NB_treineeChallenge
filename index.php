@@ -63,9 +63,9 @@ img{
 				</section>
 			</div>
 			<div align="center">
-				<form>
-					<input type="image" src="images/fazerlogin.png" name="Login" width="250">
-				</form>
+				<a href="login.php">
+					<img src="images/fazerlogin.png" width="250">
+				</a>
 			</div>
 		</section>
 			
