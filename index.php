@@ -13,12 +13,12 @@
         <link rel="stylesheet" href="css/painel.css" />
 	</head>
 
-    <style>
-        img{
-            max-width:100%;
-            height:auto;
-    }
-    </style>
+	<style>
+img{
+	max-width:100%;
+	height:auto;
+}
+</style>
 
 <body>
 	<section id="main">
@@ -61,6 +61,11 @@
 						</table>
 					</div>
 				</section>
+			</div>
+			<div align="center">
+				<form>
+					<input type="image" src="images/fazerlogin.png" name="Login" width="250">
+				</form>
 			</div>
 		</section>
 			
